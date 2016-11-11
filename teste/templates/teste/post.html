@@ -1,19 +1,13 @@
-{!DOCTYPE html}
-{html}
-{title}
+{% extends 'teste/base.html' %}
 
-{/title}
-{body}
-<div>
-    <h1><a href="/">Django Girls Blog</a></h1>
-</div>
-
+{% block content %}
 {% for post in posts %}
     <div>
-        
-        <h1><a href="">{{ post.title }}</a></h1>
+
+        <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <p><a href="{% url 'link2' pk=post.pk %}">detalhes</a></p>
     </div>
 {% endfor %}
-{/body}
-{/html}
+
+{% endblock content %}
