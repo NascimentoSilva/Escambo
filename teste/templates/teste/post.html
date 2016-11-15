@@ -6,6 +6,7 @@
 
         <h1>{{ post.title }}</h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        <p>{{ post.image }}</p>
         <p><a href="{% url 'link2' pk=post.pk %}">detalhes</a></p>
     </div>
 {% endfor %}
