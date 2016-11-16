@@ -2,5 +2,6 @@
 
 
 {% block content %}
-<a href="{% url 'link' %}">voltar</a>
+<p><img src='{{ post.image.url }}'/></p>
+<a href="{% url 'home' %}">voltar</a>
 {% endblock content %}
